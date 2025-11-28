@@ -34,8 +34,8 @@ const Planes = () => {
 
                     <ul className="plan-features">
                         <li><FaCheck className="check" /> 3 empleados</li>
-                        <li><FaCheck className="check" /> Recordatorios por email básicos (hasta 50/mes)</li>
-                        <li><FaCheck className="check" /> Gestión de clientes frecuentes (básico) y notas en cita</li>
+                        <li><FaCheck className="check" /> Hasta 100 recordatorios por email al mes (1 por cita, horario configurable).</li>
+                        <li><FaCheck className="check" /> Gestión básica de clientes frecuentes y notas.</li>
                         <li><FaCheck className="check" /> Soporte estándar por email</li>
                     </ul>
 
@@ -67,11 +67,11 @@ const Planes = () => {
                     <p className="plan-includes">Todo lo del Plan Gratis, más:</p>
                     <ul className="plan-features">
                         <li><FaCheck className="check" /> Hasta 8 empleados</li>
-                        <li><FaCheck className="check" /> Recordatorios por email ilimitados</li>
+                        <li><FaCheck className="check" /> Recordatorios por email ilimitados (hasta 3 por cita).</li>
                         <li><FaCheck className="check" /> Confirmación del cliente en 1 clic (desde correo)</li>
-                        <li><FaCheck className="check" /> Recordatorios por WhatsApp: hasta 300/mes (opt-in del cliente)</li>
-                        <li><FaCheck className="check" /> Branding en correos (logo + nombre del negocio)</li>
-                        <li><FaCheck className="check" /> Soporte con prioridad media</li>
+                        <li><FaCheck className="check" /> Recordatorios por WhatsApp para cliente y negocio (hasta 300/mes).</li>
+                        <li><FaCheck className="check" /> Confirmación de citas en 1 clic y branding en correos.</li>
+                        <li><FaCheck className="check" /> Soporte con prioridad media.</li>
                     </ul>
 
                     <button className="plan-cta">Elegir plan</button>
@@ -95,9 +95,9 @@ const Planes = () => {
 
                     <p className="plan-includes">Todo lo del Plan +Popular, más:</p>
                     <ul className="plan-features">
-                        <li><FaCheck className="check" /> Empleados ilimitados y hasta 3 sucursales</li>
-                        <li><FaCheck className="check" /> Roles y permisos</li>
-                        <li><FaCheck className="check" /> WhatsApp ampliado: hasta 2,000/mes + confirmación por WhatsApp (respuestas rápidas “Sí/No”)</li>
+                        <li><FaCheck className="check" /> Empleados ilimitados.</li>
+                        <li><FaCheck className="check" /> Roles y permisos avanzados.</li>
+                        <li><FaCheck className="check" /> Recordatorios por WhatsApp ampliados (hasta 2,000/mes) con respuestas rápidas “Sí/No”.</li>
                         <li><FaCheck className="check" /> Soporte prioritario</li>
                     </ul>
 

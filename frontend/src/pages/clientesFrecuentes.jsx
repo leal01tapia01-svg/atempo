@@ -122,11 +122,6 @@ const ClientesFrecuentes = () => {
       ) : clientes.length === 0 ? (
         <div className="estado-vacio">
           <p>No hay clientes frecuentes aún.</p>
-          {puedeCrear && (
-            <button className="nuevo-cliente-btn" onClick={abrirCrear}>
-              Agregar cliente <FaUserPlus className="icono-btn" />
-            </button>
-          )}
         </div>
       ) : (
         <table className="tabla-clientes">
