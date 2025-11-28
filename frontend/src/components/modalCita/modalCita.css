@@ -1,0 +1,278 @@
+.agendar-overlay {
+  position: fixed;
+  top: 0;
+  left: 272px;
+  width: calc(100% - 272px);
+  height: 100vh;
+  backdrop-filter: blur(0px);
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: backdrop-filter 0.4s ease, background-color 0.4s ease;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.agendar-overlay.visible {
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.agendar-modal {
+  position: fixed;
+  top: 50%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  z-index: 101;
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.agendar-header {
+  padding: 20px 20px 10px;
+  background: white;
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+
+.agendar-cerrar-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 10;
+}
+
+.agendar-cerrar-modal:hover {
+  background: #dc2626;
+}
+
+.agendar-titulo-modal {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+  text-align: center;
+}
+
+.agendar-formulario {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.agendar-info-opcionales {
+  grid-column: span 2;
+  background-color: #f0f9ff;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.agendar-formulario label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.agendar-formulario input,
+.agendar-formulario select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.agendar-formulario input:focus,
+.agendar-formulario select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.agendar-fila {
+  display: contents;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.agendar-horario {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.agendar-horario span {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.agendar-colores {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+  flex-wrap: wrap;
+}
+
+.agendar-color {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.1s;
+}
+
+.agendar-color:hover {
+  transform: scale(1.1);
+}
+
+.agendar-color.seleccionado {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px white inset;
+}
+
+.agendar-obligatorio {
+  grid-column: span 2;
+  text-align: right;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 5px;
+}
+
+.agendar-footer-btn {
+  padding: 15px 20px;
+  background: white;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.agendar-btn-guardar {
+  background: #2563eb;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.agendar-btn-guardar:hover {
+  background: #1d4ed8;
+}
+
+.agendar-btn-guardar:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.agendar-btn-eliminar {
+  background: white;
+  color: #ef4444;
+  border: 1px solid #ef4444;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.agendar-btn-eliminar:hover {
+  background: #fef2f2;
+}
+
+.alert {
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.alert.error {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+@media (max-width: 768px) {
+  .agendar-overlay {
+    left: 0;
+    width: 100%;
+  }
+  
+  .agendar-modal {
+    left: 50%;
+    width: 95%;
+    height: auto;
+    max-height: 85vh;
+  }
+
+  .agendar-formulario {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .full-width {
+    grid-column: span 1;
+  }
+  
+  .agendar-colores {
+    grid-column: span 1;
+  }
+  
+  .agendar-obligatorio {
+    grid-column: span 1;
+  }
+  
+  .agendar-info-opcionales {
+    grid-column: span 1;
+  }
+}

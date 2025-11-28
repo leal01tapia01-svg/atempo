@@ -1,0 +1,77 @@
+.aviso-wrapper {
+  background-color: #f7f8fd;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aviso-card {
+  background: #fff;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  padding: 50px 60px 25px 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aviso-logo {
+  display: block;
+  width: 140px;
+  margin: 0 auto;
+  margin-bottom: -30px;
+}
+
+.aviso-title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.aviso-fecha {
+  text-align: center;
+  font-size: 15.5px;
+  color: #7d8895;
+  margin-bottom: 20px;
+}
+
+.aviso-content {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 10px;
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+.aviso-content h2 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.aviso-content ul {
+  padding-left: 30px;
+  font-size: 17px;
+}
+
+.aviso-content li {
+  margin-bottom: 5px;
+}
+
+.aviso-btn {
+  background: #2a9d8f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 22px;
+  font-size: 17px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: -5px;
+  align-self: flex-end;
+  transition: background-color 0.3s ease;
+}
+
+.aviso-btn:hover {
+  background: #21867c;
+}

@@ -1,0 +1,206 @@
+.clientes-container {
+    padding: 25px 25px 25px 50px;
+    margin-left: 240px;
+}
+
+.header-clientes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.titulo-clientes {
+    font-size: 27px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.nuevo-cliente-btn {
+    background-color: white;
+    color: #1d1d1d;
+    border: 1.5px solid #1d1d1d;
+    padding: 8px 14px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.nuevo-cliente-btn:hover {
+    background-color: #f2f2f2;
+}
+
+.tabla-clientes {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    font-size: 17px;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+.tabla-clientes th,
+.tabla-clientes td {
+    padding: 23px 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tabla-clientes thead th {
+    font-weight: 700;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.tabla-clientes tbody td {
+    border-bottom: 1px solid #d1d5db;
+}
+
+.tabla-clientes th:not(:first-child),
+.tabla-clientes td:not(:first-child) {
+    border-left: 1px solid #d1d5db;
+}
+
+.tabla-clientes tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.icono-editar {
+    color: #2563eb;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.icono-borrar {
+    color: #dc2626;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Nombre completo */
+.tabla-clientes thead th:nth-child(1),
+.tabla-clientes tbody td:nth-child(1) {
+    width: 45%;
+}
+
+/* Correo */
+.tabla-clientes thead th:nth-child(2),
+.tabla-clientes tbody td:nth-child(2) {
+    width: 30%;
+}
+
+/* Número celular */
+.tabla-clientes thead th:nth-child(3),
+.tabla-clientes tbody td:nth-child(3) {
+    width: 15%;
+}
+
+/* Opciones */
+.tabla-clientes thead th:nth-child(4),
+.tabla-clientes tbody td:nth-child(4) {
+    width: 10%;
+}
+
+.tabla-clientes td .cell-wrap,
+.tabla-clientes th .cell-wrap {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    word-break: break-word;
+    line-height: 1.25;
+    max-height: calc(1.25em * 2);
+    padding: 0 4px;
+}
+
+
+@media (max-width: 1024px) {
+    .titulo-clientes {
+        font-size: 24px;
+    }
+
+    .nuevo-cliente-btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .tabla-clientes {
+        font-size: 16px;
+    }
+
+    .tabla-clientes td .cell-wrap,
+    .tabla-clientes th .cell-wrap {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        word-break: break-word;
+        line-height: 1.25;
+        max-height: calc(1.25em * 2);
+        padding: 0 4px;
+    }
+
+    .tabla-clientes td .cell-wrap,
+    .tabla-clientes th .cell-wrap {
+        -webkit-line-clamp: 3;
+        max-height: calc(1.25em * 3);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-clientes {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .clientes-container {
+        padding: 0 16px;
+        margin-left: 0;
+    }
+
+    .tabla-clientes {
+        display: block;
+        overflow-x: auto;
+        border-radius: 8px;
+    }
+
+    .tabla-clientes table {
+        width: max-content;
+    }
+
+    .tabla-clientes {
+        margin-bottom: 100px;
+    }
+
+    .tabla-clientes td .cell-wrap,
+    .tabla-clientes th .cell-wrap {
+        -webkit-line-clamp: 5;
+        max-height: calc(1.25em * 5);
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-clientes {
+        font-size: 20px;
+    }
+
+    .nuevo-cliente-btn {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+
+    .icono-editar,
+    .icono-borrar {
+        font-size: 18px;
+    }
+
+    .tabla-clientes {
+        font-size: 15px;
+    }
+}

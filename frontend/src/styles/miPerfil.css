@@ -1,0 +1,217 @@
+.perfil-container {
+  padding: 25px 25px 25px 50px;
+  margin-left: 240px;
+}
+
+.perfil-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 18px 0;
+}
+
+.perfil-section {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .08);
+  padding: 18px 16px 16px;
+  max-width: 1200px;
+  margin-bottom: 16px;
+}
+
+.perfil-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 2px 4px 14px;
+  color: #1f2937;
+}
+
+.perfil-avatar-label {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #1f2937;
+}
+
+.perfil-negocio-center {
+  align-items: center;
+}
+
+.perfil-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.perfil-field label {
+  font-size: 15px;
+  font-weight: 600;
+  padding-left: 5px;
+  margin-bottom: 6px;
+}
+
+.perfil-field input {
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  outline: none;
+}
+
+.perfil-field input:focus {
+  border-color: #1976d2;
+}
+
+.perfil-negocio-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 14px 18px;
+  align-items: center;
+  padding: 2px 6px;
+}
+
+.perfil-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 18px;
+  padding: 2px 6px;
+}
+
+.perfil-avatar-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.perfil-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+.perfil-upload-btn {
+  background-color: white;
+  color: #1d1d1d;
+  border: 1px solid #1d1d1d;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s ease;
+}
+
+.perfil-upload-btn:hover {
+  background-color: #f2f2f2;
+}
+
+.perfil-upload-icon {
+  font-size: 14px;
+}
+
+.perfil-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.perfil-btn-primary {
+  background: linear-gradient(to right, #1976d2, #1e88e5);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(25, 118, 210, 0.25);
+  transition: background .3s ease, transform .2s ease;
+}
+
+.perfil-btn-primary:hover {
+  background: linear-gradient(to right, #1565c0, #1976d2);
+}
+
+.perfil-btn-outline {
+  background: #fff;
+  color: #1f2937;
+  border: 1px solid #1f2937;
+  padding: 9px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.perfil-btn-outline:hover {
+  background: #f3f4f6;
+}
+
+.perfil-sub-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 18px;
+  padding: 2px 6px;
+}
+
+.perfil-sub-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.perfil-sub-label {
+  font-weight: 700;
+  color: #111827;
+}
+
+.perfil-sub-value {
+  color: #374151;
+}
+
+@media (max-width: 1024px) {
+  .perfil-section {
+    padding: 16px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .perfil-container {
+    padding: 0 16px;
+    margin-left: 0;
+  }
+
+  .perfil-avatar-label {
+    font-size: 14px;
+  }
+
+  .perfil-negocio-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: left;
+  }
+
+  .perfil-grid-2,
+  .perfil-sub-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .perfil-section:last-of-type {
+    margin-bottom: 90px;
+  }
+
+  .perfil-btn-primary,
+  .perfil-btn-outline {
+    font-size: 14px;
+    padding: 9px 18px;
+  }
+}

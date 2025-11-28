@@ -1,0 +1,59 @@
+.top-header {
+  position: sticky;
+  top: 0;
+  margin-left: 240px;
+  z-index: 50;
+  background-color: #fff;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.business-name {
+  font-size: 26px;
+  font-weight: 600;
+  color: #000;
+}
+
+.logout-mobile-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 16px;
+}
+
+.logout-mobile-btn:hover {
+  background-color: #fddede;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+@media (max-width: 1024px) {
+  .business-name {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-header {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+
+  .business-name {
+    font-size: 19px;
+    text-align: center;
+  }
+
+  .logout-mobile-btn {
+    display: block;
+    position: absolute;
+    right: 16px;
+    top: 22px;
+  }
+}

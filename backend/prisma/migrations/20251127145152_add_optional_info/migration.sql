@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE "Cita" ALTER COLUMN "clienteNombre" DROP NOT NULL,
+ALTER COLUMN "celular" DROP NOT NULL,
+ALTER COLUMN "clienteEmail" DROP NOT NULL;

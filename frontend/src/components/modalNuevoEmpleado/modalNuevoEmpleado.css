@@ -1,0 +1,188 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 272px;
+  width: calc(100% - 266px);
+  height: 100vh;
+  backdrop-filter: blur(0px);
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: backdrop-filter 0.8s ease-in-out, background-color 0.8s ease-in-out;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay.visible {
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 58.5%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 0px 25px rgba(0, 0, 0, 0.3);
+  z-index: 101;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cerrar-modal {
+  position: absolute;
+  padding-top: 5px;
+  top: 12px;
+  right: 12px;
+  background: #D93025;
+  color: white;
+  border: none;
+  border-radius: 28%;
+  font-size: 17px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.titulo-modal {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.avatar-modal {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.btn-cargar-foto {
+  background-color: white;
+  color: #1d1d1d;
+  border: 1px solid #1d1d1d;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 7px;
+  margin-bottom: 18px;
+}
+
+.btn-cargar-foto:hover {
+  background-color: #f2f2f2;
+}
+
+.formulario-modal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formulario-modal label {
+  padding-left: 25px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.formulario-modal input {
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  margin: 0 20px;
+}
+
+.btn-guardar {
+  margin: 18px auto 0;
+  background: linear-gradient(to right, #1976d2, #1e88e5);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 4px 8px rgba(25, 118, 210, 0.25);
+  transition: background 0.3s ease;
+}
+
+.btn-guardar:hover {
+  background: linear-gradient(to right, #1565c0, #1976d2);
+}
+
+@media (max-width: 1199px) {
+  .overlay {
+    left: 272px;
+    width: calc(100% - 272px);
+  }
+
+  .modal {
+    left: 62%;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    left: 0;
+    width: 100%;
+    height: 77%;
+    padding-bottom: 70px;
+  }
+
+  .overlay.visible {
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .modal {
+    width: 92%;
+    max-width: 420px;
+    padding: 22px 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .titulo-modal {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .formulario-modal label {
+    padding-left: 14px;
+    font-size: 13px;
+  }
+
+  .formulario-modal input {
+    font-size: 14px;
+    padding: 9px 10px;
+    margin: 0 14px;
+  }
+
+  .btn-guardar {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+
+  .cerrar-modal {
+    font-size: 15px;
+    width: 26px;
+    height: 26px;
+  }
+}

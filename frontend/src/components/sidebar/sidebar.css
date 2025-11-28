@@ -1,0 +1,238 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 240px;
+    background-color: #e7ebf7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 16px;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    overflow-y: auto;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d2d2d;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #2d2d2d;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #dce3f2;
+}
+
+.menu a.active {
+    background-color: #dce3f2;
+    color: #1d4ed8;
+}
+
+
+.menu-btn {
+    text-align: left;
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 17px;
+    color: #2d2d2d;
+    padding: 10px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.menu-btn:hover {
+    background-color: #dce3f2;
+}
+
+.menu-btn:focus {
+    outline: none;
+}
+
+.menu-btn.active {
+    background-color: #dce3f2;
+    padding: 10px 12px;
+    color: #1d4ed8;
+    border-radius: 8px;
+}
+
+.logout-btn {
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(1, 26, 92, 0.2);
+    color: #dc2626;
+    border: none;
+    width: 180px;
+    font-weight: 600;
+    border-radius: 8px;
+    margin-top: auto;
+    margin-bottom: 55px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s ease;
+}
+
+.logout-btn:hover {
+    background-color: #dc2626;
+    color: white;
+}
+
+.icon {
+    font-size: 19px;
+}
+
+.logout-icon {
+    font-size: 17px;
+}
+
+@media (max-width: 1024px) {
+
+    .menu a,
+    .menu-btn {
+        font-size: 15px;
+        padding: 8px 10px;
+    }
+
+    .icon {
+        font-size: 16px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .brand-name {
+        font-size: 1.2rem;
+    }
+
+    .logout-btn {
+        width: 160px;
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        right: 0;
+        height: 70px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 5px 10px;
+        box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        isolation: isolate;
+    }
+
+    .logo-section,
+    .brand-name,
+    .logout-btn {
+        display: none;
+    }
+
+    .menu {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        gap: 0;
+        padding: 0 24px;
+        margin-right: 5%;
+    }
+
+    .menu a,
+    .menu-btn {
+        all: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        font-size: 0;
+        position: relative;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+    }
+
+    .menu a.active,
+    .menu-btn.active {
+        padding: 0 !important;
+        background-color: #dce3f2;
+        color: #1d4ed8;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon {
+        font-size: 22px;
+        margin: 0;
+        line-height: 1;
+    }
+
+    .logout-menu-btn {
+        color: #dc2626;
+        margin-right: 9%;
+    }
+
+    .logout-menu-btn.active {
+        background-color: #fddede;
+        color: #dc2626;
+    }
+
+    body.modal-abierto {
+        overflow: hidden;
+    }
+}

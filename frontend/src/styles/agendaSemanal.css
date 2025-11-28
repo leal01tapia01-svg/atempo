@@ -1,0 +1,239 @@
+.weekly-agenda-main {
+  flex: 1;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+  overflow-x: auto;
+  margin-left: 240px;
+  position: relative;
+}
+
+.agenda-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.employee-banner {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+  padding-left: 12px;
+}
+
+.employee-banner img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+
+.employee-banner span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.day-agenda {
+  font-size: 16px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px !important;
+}
+
+.appointmentWeek {
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px rgba(80, 80, 80, 0.2);
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  gap: 2px;
+  z-index: 2;
+}
+
+.agenda-grid .time-cell:last-child {
+  border-right: none !important;
+}
+
+.weekly-clock-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weekly-clock-btn {
+  background: #E8EDFB;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  height: 30px;
+  min-width: 42px;
+}
+
+.weekly-clock-btn .dropdown-arrow {
+  font-size: 10px;
+  color: #333;
+  margin-left: 5px;
+  position: relative;
+  top: 1px;
+}
+
+.agenda-grid .weekly-clock-header {
+  border-right: none !important;
+}
+
+
+.scroll-btn-week.left {
+  left: 52px;
+}
+
+.scroll-btn-week.right {
+  right: 22px;
+}
+
+.scroll-btn-week {
+  top: 145px;
+}
+
+
+@media (max-width: 1024px) {
+  .weekly-agenda-main {
+    margin-left: 268px;
+    padding: 1rem;
+  }
+
+  .employee-banner span {
+    font-size: 16px;
+  }
+
+  .agenda-title {
+    font-size: 18px;
+  }
+
+  .weekly-clock-btn {
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+
+
+  .employee-banner img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .scroll-btn-week {
+    top: 132px;
+    padding: 6px 10px;
+  }
+
+  .scroll-btn-week.left {
+    left: 37.5px;
+  }
+
+  .scroll-btn-week.right {
+    right: 37.5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .weekly-agenda-main {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .agenda-title {
+    font-size: 17px;
+    text-align: left;
+    padding-left: 8px;
+  }
+
+  .employee-banner {
+    gap: 8px;
+    padding-left: 8px;
+  }
+
+  .employee-banner img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .employee-banner span {
+    font-size: 15px;
+  }
+
+
+  .weekly-clock-btn {
+    margin-left: -30px;
+    margin-top: 5px;
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .scroll-btn-week {
+    top: 130px;
+    font-size: 15px;
+  }
+
+  .scroll-btn-week.left {
+    margin-top: 3px;
+    left: 24px;
+  }
+
+  .scroll-btn-week.right {
+    margin-top: 3px;
+    right: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .agenda-title {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+
+  .employee-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .employee-banner img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .employee-banner span {
+    font-size: 14px;
+  }
+
+  .weekly-clock-btn {
+    padding: 4px 6px;
+    font-size: 12px;
+  }
+
+  .scroll-btn-week {
+    top: 184px;
+  }
+
+  .scroll-btn-week.left {
+    left: 24px;
+  }
+
+  .scroll-btn-week.right {
+    right: 24px;
+  }
+}

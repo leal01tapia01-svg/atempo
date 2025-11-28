@@ -1,0 +1,328 @@
+.empleados-container {
+  padding: 25px 25px 25px 50px;
+  margin-left: 240px;
+}
+
+.header-empleados {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 15px;
+  margin-bottom: 25px;
+}
+
+.titulo-empleados {
+  font-size: 27px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.nuevo-empleado-btn {
+  background-color: white;
+  color: #1d1d1d;
+  border: 1.5px solid #1d1d1d;
+  padding: 8px 14px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.nuevo-empleado-btn:hover {
+  background-color: #f2f2f2;
+}
+
+.tabla-empleados {
+  margin-left: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  font-size: 17px;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+.tabla-empleados th,
+.tabla-empleados td {
+  padding: 12px 10px;
+  text-align: center;
+}
+
+.tabla-empleados thead th {
+  font-weight: 700;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.tabla-empleados tbody td {
+  border-bottom: 1px solid #d1d5db;
+}
+
+.tabla-empleados thead th,
+.tabla-empleados tbody td {
+  padding: 12px 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.avatar-empleado {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tabla-empleados th:not(:first-child),
+.tabla-empleados td:not(:first-child) {
+  border-left: 1px solid #d1d5db;
+}
+
+.tabla-empleados tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.header-empleados,
+.tabla-empleados {
+  margin-left: 0;
+}
+
+.icono-editar {
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.icono-borrar {
+  color: #dc2626;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 15%;
+}
+
+/* Foto */
+.tabla-empleados thead th:nth-child(1),
+.tabla-empleados tbody td:nth-child(1) {
+  width: 10%;
+}
+
+/* Nombre completo */
+.tabla-empleados thead th:nth-child(2),
+.tabla-empleados tbody td:nth-child(2) {
+  width: 40%;
+}
+
+/* Correo */
+.tabla-empleados thead th:nth-child(3),
+.tabla-empleados tbody td:nth-child(3) {
+  width: 25%;
+}
+
+/* Número celular */
+.tabla-empleados thead th:nth-child(4),
+.tabla-empleados tbody td:nth-child(4) {
+  width: 15%;
+}
+
+/* Opciones */
+.tabla-empleados thead th:nth-child(5),
+.tabla-empleados tbody td:nth-child(5) {
+  width: 10%;
+}
+
+.tabla-empleados td .cell-wrap,
+.tabla-empleados th .cell-wrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  word-break: break-word;
+  line-height: 1.25;
+  max-height: calc(1.25em * 2);
+  padding: 0 4px;
+}
+
+.tabla-empleados th,
+.tabla-empleados td {
+  vertical-align: middle;
+}
+
+@media (max-width: 1280px) {
+  /* Nombre */
+  .tabla-empleados thead th:nth-child(2),
+  .tabla-empleados tbody td:nth-child(2) {
+    width: 38%;
+  }
+
+  /* Correo */
+  .tabla-empleados thead th:nth-child(3),
+  .tabla-empleados tbody td:nth-child(3) {
+    width: 27%;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .titulo-empleados {
+    font-size: 24px;
+  }
+
+  .nuevo-empleado-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .tabla-empleados {
+    font-size: 15px;
+  }
+
+  .avatar-empleado {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icono-editar,
+  .icono-borrar {
+    font-size: 20px;
+    margin-left: 0px;
+  }
+
+  /* Foto */
+  .tabla-empleados thead th:nth-child(1),
+  .tabla-empleados tbody td:nth-child(1) {
+    width: 12%;
+  }
+
+  /* Nombre */
+  .tabla-empleados thead th:nth-child(2),
+  .tabla-empleados tbody td:nth-child(2) {
+    width: 37%;
+  }
+
+  /* Correo */
+  .tabla-empleados thead th:nth-child(3),
+  .tabla-empleados tbody td:nth-child(3) {
+    width: 25%;
+  }
+
+  /* Celular */
+  .tabla-empleados thead th:nth-child(4),
+  .tabla-empleados tbody td:nth-child(4) {
+    width: 13%;
+  }
+
+  /* Opciones */
+  .tabla-empleados thead th:nth-child(5),
+  .tabla-empleados tbody td:nth-child(5) {
+    width: 13%;
+  }
+
+  .tabla-empleados td .cell-wrap,
+  .tabla-empleados th .cell-wrap {
+    -webkit-line-clamp: 3;
+    max-height: calc(1.25em * 3);
+  }
+}
+
+@media (max-width: 768px) {
+  .empleados-container {
+    padding: 0 14px;
+    margin-left: 0;
+  }
+
+  .tabla-empleados {
+    display: block;
+    overflow-x: auto;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+
+  .tabla-empleados table {
+    width: max-content;
+  }
+
+  .tabla-empleados {
+    margin-bottom: 100px;
+  }
+
+  /* Foto */
+  .tabla-empleados thead th:nth-child(1),
+  .tabla-empleados tbody td:nth-child(1) {
+    width: 72px;
+  }
+
+  /* Nombre */
+  .tabla-empleados thead th:nth-child(2),
+  .tabla-empleados tbody td:nth-child(2) {
+    width: 320px;
+  }
+
+  /* Correo */
+  .tabla-empleados thead th:nth-child(3),
+  .tabla-empleados tbody td:nth-child(3) {
+    width: 300px;
+  }
+
+  /* Celular */
+  .tabla-empleados thead th:nth-child(4),
+  .tabla-empleados tbody td:nth-child(4) {
+    width: 140px;
+  }
+
+  /* Opciones */
+  .tabla-empleados thead th:nth-child(5),
+  .tabla-empleados tbody td:nth-child(5) {
+    width: 100px;
+  }
+
+  .avatar-empleado {
+    width: 46px;
+    height: 46px;
+  }
+
+  .icono-editar,
+  .icono-borrar {
+    font-size: 18px;
+  }
+
+  .tabla-empleados td .cell-wrap,
+  .tabla-empleados th .cell-wrap {
+    -webkit-line-clamp: 5;
+    max-height: calc(1.25em * 5);
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-empleados {
+    font-size: 20px;
+  }
+
+  .nuevo-empleado-btn {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+
+  .icono-editar,
+  .icono-borrar {
+    font-size: 18px;
+  }
+
+  .avatar-empleado {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Nombre */
+  .tabla-empleados thead th:nth-child(2),
+  .tabla-empleados tbody td:nth-child(2) {
+    width: 300px;
+  }
+
+  /* Correo */
+  .tabla-empleados thead th:nth-child(3),
+  .tabla-empleados tbody td:nth-child(3) {
+    width: 280px;
+  }
+}

@@ -1,0 +1,117 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+
+
+model Usuario {
+  id String @id @default(cuid())
+  negocioNombre String
+  duenoNombres String
+  duenoApellidos String
+  celular String @unique
+  email String @unique
+  logoUrl String
+  passwordHash String
+
+  plan Plan @default(GRATIS)
+
+  onboardingCompleted Boolean @default(false)
+
+  emailVerified Boolean @default(false)
+  verificationCode String?
+  verificationExpires DateTime?
+
+  twoFactorCode String?
+  twoFactorExpires DateTime?
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  empleados Empleado[]
+  citas Cita[]
+  clientesFrecuentes ClienteFrecuente[]
+
+  @@index([email])
+  @@index([celular])
+}
+
+model Empleado {
+  id String @id @default(cuid())
+  usuarioId String
+  nombres String
+  apellidos String
+  celular String @unique
+  email String @unique
+  fotoUrl String
+
+  passwordHash String?
+  permisos Json?
+
+  isActive Boolean @default(true)
+  deletedAt DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  usuario Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  citas Cita[]
+
+  @@index([usuarioId])
+}
+
+model Cita {
+  id String @id @default(cuid())
+  usuarioId String
+  empleadoId String?
+  titulo String
+  clienteNombre String?
+  celular String?
+  clienteEmail String?
+  nota String?
+  color String?
+  startAt DateTime
+  endAt DateTime
+
+  tieneRecordatorio Boolean @default(false)
+  recAnticipacionHoras Int?
+  recIntervaloMinutos Int?
+  recCantidad Int?
+  recEnviados Int @default(0)
+  recUltimoEnvio DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  usuario Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  empleado Empleado? @relation(fields: [empleadoId], references: [id], onDelete: Restrict)
+
+  @@index([usuarioId, startAt])
+  @@index([empleadoId, startAt])
+}
+
+model ClienteFrecuente {
+  id String @id @default(cuid())
+  usuarioId String
+  nombre String
+  correo String
+  celular String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  usuario Usuario @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+
+  @@unique([usuarioId, correo])
+  @@unique([usuarioId, celular])
+  @@index([usuarioId])
+}
+
+enum Plan {
+  GRATIS
+  POPULAR
+  PRO
+}

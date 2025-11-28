@@ -1,0 +1,170 @@
+.roles-container {
+  height: calc(100vh - 89px);
+  width: 100%;
+  background-color: #f4f6f8;
+  padding-left: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .roles-container {
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+.roles-content-wrapper {
+  width: 95%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.card-panel {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  max-height: 100%; 
+  overflow-y: auto;
+}
+
+.card-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.8rem;
+  text-align: center;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.3rem;
+}
+
+.text-muted {
+  color: #7f8c8d;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.selector-container {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.selector-label {
+  font-weight: 500;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.empleado-select {
+  padding: 6px 10px;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #333;
+  width: 100%;
+  max-width: 280px;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.permissions-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.permissions-table th {
+  background-color: #f8f9fa;
+  color: #495057;
+  font-weight: 600;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #dee2e6;
+  text-align: center;
+}
+
+.permissions-table th:first-child,
+.permissions-table td:first-child {
+  text-align: left;
+  padding-left: 1.5rem;
+  width: 30%;
+}
+
+.permissions-table td {
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.permissions-table input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #1976d2;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.fw-bold {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #f0f0f0;
+}
+
+.btn-save {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  box-shadow: 0 2px 4px rgba(25, 118, 210, 0.2);
+}
+
+.btn-save:hover {
+  background-color: #1565c0;
+}
+
+.btn-save:active {
+  transform: translateY(1px);
+}
