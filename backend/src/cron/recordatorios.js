@@ -63,8 +63,8 @@ export const iniciarCronRecordatorios = () => {
           console.log(`Enviando recordatorio (${cita.recEnviados + 1}/${cita.recCantidad}) para cita ${cita.id}`);
 
           const fechaObj = new Date(cita.startAt);
-          const fechaStr = fechaObj.toLocaleDateString('es-MX', { weekday: 'long', day: 'numeric', month: 'long' });
-          const horaStr = fechaObj.toLocaleTimeString('es-MX', { hour: '2-digit', minute: '2-digit' });
+          const fechaStr = fechaObj.toLocaleDateString('es-MX', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'America/Mexico_City' });
+          const horaStr = fechaObj.toLocaleTimeString('es-MX', { hour: '2-digit', minute: '2-digit', timeZone: 'America/Mexico_City' });
 
           await sendCitaReminderEmail({
             to: cita.clienteEmail,
