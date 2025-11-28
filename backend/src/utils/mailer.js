@@ -69,3 +69,36 @@ export async function sendCitaReminderEmail({ to, cliente, servicio, fecha, hora
     `,
   });
 }
+
+export async function sendCitaReminderEmpleadoEmail({
+  to,
+  empleado,
+  servicio,
+  fecha,
+  hora,
+  cliente,
+  negocio,
+}) {
+  await transporter.sendMail({
+    from: `"Atempo Recordatorios" <${process.env.SMTP_USER}>`,
+    to,
+    subject: `Cita agendada: ${servicio}`,
+    html: `
+      <div style="font-family: Arial, sans-serif; color: #333;">
+        <h2 style="color: #1976d2;">Hola ${empleado},</h2>
+        <p>Tienes una cita próxima agendada en <strong>${negocio}</strong>.</p>
+        
+        <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px; margin: 20px 0;">
+          <p style="margin: 5px 0;"><strong>Servicio:</strong> ${servicio}</p>
+          <p style="margin: 5px 0;"><strong>Cliente:</strong> ${cliente}</p>
+          <p style="margin: 5px 0;"><strong>Fecha:</strong> ${fecha}</p>
+          <p style="margin: 5px 0;"><strong>Hora:</strong> ${hora}</p>
+        </div>
+
+        <p>Por favor, prepárate para esta cita.</p>
+        <hr style="border: 0; border-top: 1px solid #eee;" />
+        <small style="color: #777;">Este mensaje es solo un recordatorio interno para el personal del negocio.</small>
+      </div>
+    `,
+  });
+}
