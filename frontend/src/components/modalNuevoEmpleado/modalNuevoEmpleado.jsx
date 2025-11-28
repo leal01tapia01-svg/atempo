@@ -109,13 +109,13 @@ const ModalNuevoEmpleado = ({ modo = 'crear', empleado, onClose, onSaved }) => {
       let res, data;
 
       if (modo === 'editar' && form.id) {
-        res = await fetch(`/api/empleados/${form.id}`, {
+        res = await fetch(`https://atempo.onrender.com/api/empleados/${form.id}`, {
           method: 'PUT',
           headers: { Authorization: `Bearer ${token}` },
           body: fd,
         });
       } else {
-        res = await fetch('/api/empleados', {
+        res = await fetch('https://atempo.onrender.com/api/empleados', {
           method: 'POST',
           headers: { Authorization: `Bearer ${token}` },
           body: fd,

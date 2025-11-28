@@ -85,8 +85,8 @@ const ModalCita = ({ modo = 'crear', cita = {}, onClose, onGuardar, onEliminar }
       try {
         setLoadingEmps(true);
         const [resEmp, resClientes] = await Promise.all([
-          fetch('/api/empleados?forAgenda=true', { headers: { Authorization: `Bearer ${token}` } }),
-          fetch('/api/clientes-frecuentes', { headers: { Authorization: `Bearer ${token}` } }) 
+          fetch('https://atempo.onrender.com/api/empleados?forAgenda=true', { headers: { Authorization: `Bearer ${token}` } }),
+          fetch('https://atempo.onrender.com/api/clientes-frecuentes', { headers: { Authorization: `Bearer ${token}` } }) 
         ]);
 
         const dataEmp = await resEmp.json();
@@ -274,7 +274,7 @@ const ModalCita = ({ modo = 'crear', cita = {}, onClose, onGuardar, onEliminar }
       if (modo === 'editar' && cita?.id) {
         if (!puedeEditar) throw new Error('No tienes permiso para editar esta cita.');
 
-        res = await fetch(`/api/citas/${cita.id}`, {
+        res = await fetch(`https://atempo.onrender.com/api/citas/${cita.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -285,7 +285,7 @@ const ModalCita = ({ modo = 'crear', cita = {}, onClose, onGuardar, onEliminar }
       } else {
         if (!puedeCrear) throw new Error('No tienes permiso para crear citas.');
 
-        res = await fetch('/api/citas', {
+        res = await fetch('https://atempo.onrender.com/api/citas', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -318,7 +318,7 @@ const ModalCita = ({ modo = 'crear', cita = {}, onClose, onGuardar, onEliminar }
 
     setSubmitting(true);
     try {
-      const res = await fetch(`/api/citas/${cita.id}`, {
+      const res = await fetch(`https://atempo.onrender.com/api/citas/${cita.id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });

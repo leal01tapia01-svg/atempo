@@ -67,8 +67,8 @@ const AgendaDiaria = () => {
     setErrorMsg('');
     try {
       const [resEmp, resCitas] = await Promise.all([
-        fetch('/api/empleados?forAgenda=true', { headers: { Authorization: `Bearer ${token}` } }),
-        fetch('/api/citas', { headers: { Authorization: `Bearer ${token}` } }),
+        fetch('https://atempo.onrender.com/api/empleados?forAgenda=true', { headers: { Authorization: `Bearer ${token}` } }),
+        fetch('https://atempo.onrender.com/api/citas', { headers: { Authorization: `Bearer ${token}` } }),
       ]);
 
       const empData = await resEmp.json();

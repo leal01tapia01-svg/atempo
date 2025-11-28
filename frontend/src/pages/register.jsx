@@ -93,7 +93,7 @@ const Register = () => {
       fd.append('password', form.password);
       fd.append('logo', logoFile);
 
-      const res = await fetch(`/api/auth/register`, {
+      const res = await fetch(`https://atempo.onrender.com/api/auth/register`, {
         method: 'POST',
         body: fd,
       });

@@ -45,7 +45,7 @@ const Empleados = () => {
     setLoading(true);
     setErrorMsg('');
     try {
-      const res = await fetch('/api/empleados', {
+      const res = await fetch('https://atempo.onrender.com/api/empleados', {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await res.json();
@@ -102,7 +102,7 @@ const Empleados = () => {
     if (!empleadoAEliminar) return;
     setDeleting(true);
     try {
-      const res = await fetch(`/api/empleados/${empleadoAEliminar.id}`, {
+      const res = await fetch(`https://atempo.onrender.com/api/empleados/${empleadoAEliminar.id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` }
       });
