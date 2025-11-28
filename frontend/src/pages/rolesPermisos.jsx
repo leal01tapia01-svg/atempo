@@ -21,7 +21,7 @@ const RolesPermisos = () => {
         const token = localStorage.getItem('token');
         if (!token) return;
 
-        const response = await fetch('https://atempo.onrender.com/api/empleados', {
+        const response = await fetch('https://biological-ariel-atempo-05d801c3.koyeb.app/api/empleados', {
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`
@@ -74,7 +74,7 @@ const RolesPermisos = () => {
     setGuardando(true);
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://atempo.onrender.com/api/empleados/${empleadoSeleccionado}/permisos`, {
+      const response = await fetch(`https://biological-ariel-atempo-05d801c3.koyeb.app/api/empleados/${empleadoSeleccionado}/permisos`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

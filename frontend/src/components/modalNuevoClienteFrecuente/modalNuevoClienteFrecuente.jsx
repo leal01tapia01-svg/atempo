@@ -44,7 +44,7 @@ const ModalNuevoClienteFrecuente = ({ modo = 'crear', cliente, onClose }) => {
     lastAbort.current = controller;
 
     setLoading(true);
-    fetch(`https://atempo.onrender.com/api/citas/sugerencias?nombre=${encodeURIComponent(q)}`, {
+    fetch(`https://biological-ariel-atempo-05d801c3.koyeb.app/api/citas/sugerencias?nombre=${encodeURIComponent(q)}`, {
       method: 'GET',
       headers: { Authorization: `Bearer ${token}` },
       signal: controller.signal
@@ -109,13 +109,13 @@ const ModalNuevoClienteFrecuente = ({ modo = 'crear', cliente, onClose }) => {
     try {
       let res, data;
       if (modo === 'editar' && form.id) {
-        res = await fetch(`https://atempo.onrender.com/api/clientes-frecuentes/${form.id}`, {
+        res = await fetch(`https://biological-ariel-atempo-05d801c3.koyeb.app/api/clientes-frecuentes/${form.id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
           body: JSON.stringify(payload)
         });
       } else {
-        res = await fetch('https://atempo.onrender.com/api/clientes-frecuentes', {
+        res = await fetch('https://biological-ariel-atempo-05d801c3.koyeb.app/api/clientes-frecuentes', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
           body: JSON.stringify(payload)
@@ -136,7 +136,7 @@ const ModalNuevoClienteFrecuente = ({ modo = 'crear', cliente, onClose }) => {
     setSaving(true);
     setErrorMsg('');
     try {
-      const res = await fetch(`https://atempo.onrender.com/api/clientes-frecuentes/${form.id}`, {
+      const res = await fetch(`https://biological-ariel-atempo-05d801c3.koyeb.app/api/clientes-frecuentes/${form.id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` }
       });

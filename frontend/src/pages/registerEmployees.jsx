@@ -66,7 +66,7 @@ const RegisterEmployees = () => {
   const handleSkip = async () => {
     try {
       if (token) {
-        await fetch("https://atempo.onrender.com/api/auth/complete-onboarding", {
+        await fetch("https://biological-ariel-atempo-05d801c3.koyeb.app/api/auth/complete-onboarding", {
           method: "POST",
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -206,7 +206,7 @@ const RegisterEmployees = () => {
         fd.append("email", c.email.trim());
         if (c.fotoFile) fd.append("foto", c.fotoFile);
 
-        const res = await fetch("https://atempo.onrender.com/api/empleados", {
+        const res = await fetch("https://biological-ariel-atempo-05d801c3.koyeb.app/api/empleados", {
           method: "POST",
           headers: { Authorization: `Bearer ${token}` },
           body: fd,
@@ -220,7 +220,7 @@ const RegisterEmployees = () => {
 
       await Promise.all(requests);
 
-      await fetch("https://atempo.onrender.com/api/auth/complete-onboarding", {
+      await fetch("https://biological-ariel-atempo-05d801c3.koyeb.app/api/auth/complete-onboarding", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
       });

@@ -73,8 +73,8 @@ const AgendaSemanal = () => {
     setErrorMsg('');
     try {
       const [resEmp, resCitas] = await Promise.all([
-        fetch('https://atempo.onrender.com/api/empleados?forAgenda=true', { headers: { Authorization: `Bearer ${token}` } }),
-        fetch('https://atempo.onrender.com/api/citas', { headers: { Authorization: `Bearer ${token}` } }),
+        fetch('https://biological-ariel-atempo-05d801c3.koyeb.app/api/empleados?forAgenda=true', { headers: { Authorization: `Bearer ${token}` } }),
+        fetch('https://biological-ariel-atempo-05d801c3.koyeb.app/api/citas', { headers: { Authorization: `Bearer ${token}` } }),
       ]);
 
       const empData = await resEmp.json();

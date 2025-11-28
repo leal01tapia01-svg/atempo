@@ -33,7 +33,7 @@ const ClientesFrecuentes = () => {
     setError('');
     setCargando(true);
     try {
-      const res = await fetch('https://atempo.onrender.com/api/clientes-frecuentes', {
+      const res = await fetch('https://biological-ariel-atempo-05d801c3.koyeb.app/api/clientes-frecuentes', {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await res.json();
@@ -88,7 +88,7 @@ const ClientesFrecuentes = () => {
     setEliminando(true);
     setError('');
     try {
-      const res = await fetch(`https://atempo.onrender.com/api/clientes-frecuentes/${clienteAEliminar.id}`, {
+      const res = await fetch(`https://biological-ariel-atempo-05d801c3.koyeb.app/api/clientes-frecuentes/${clienteAEliminar.id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` }
       });

@@ -38,7 +38,7 @@ const MiPerfil = () => {
     (async () => {
       try {
         setErr('');
-        const res = await fetch('https://atempo.onrender.com/api/auth/me', {
+        const res = await fetch('https://biological-ariel-atempo-05d801c3.koyeb.app/api/auth/me', {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
@@ -80,7 +80,7 @@ const MiPerfil = () => {
     setSavingBusiness(true);
     setErr('');
     try {
-      const res = await fetch('https://atempo.onrender.com/api/auth/profile/business', {
+      const res = await fetch('https://biological-ariel-atempo-05d801c3.koyeb.app/api/auth/profile/business', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -113,7 +113,7 @@ const MiPerfil = () => {
     setSavingPersonal(true);
     setErr('');
     try {
-      const res = await fetch('https://atempo.onrender.com/api/auth/profile/personal', {
+      const res = await fetch('https://biological-ariel-atempo-05d801c3.koyeb.app/api/auth/profile/personal', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -149,7 +149,7 @@ const MiPerfil = () => {
     setSavingPwd(true);
     setErr('');
     try {
-      const res = await fetch('https://atempo.onrender.com/api/auth/profile/password', {
+      const res = await fetch('https://biological-ariel-atempo-05d801c3.koyeb.app/api/auth/profile/password', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -186,7 +186,7 @@ const MiPerfil = () => {
     try {
       const fd = new FormData();
       fd.append('logo', file);
-      const res = await fetch('https://atempo.onrender.com/api/auth/profile/logo', {
+      const res = await fetch('https://biological-ariel-atempo-05d801c3.koyeb.app/api/auth/profile/logo', {
         method: 'PUT',
         headers: { Authorization: `Bearer ${token}` },
         body: fd,

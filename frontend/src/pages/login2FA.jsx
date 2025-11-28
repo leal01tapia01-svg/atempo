@@ -19,7 +19,7 @@ const Login2FA = () => {
     setLoading(true);
 
     try {
-      const res = await fetch('https://atempo.onrender.com/api/auth/login/verify-2fa', {
+      const res = await fetch('https://biological-ariel-atempo-05d801c3.koyeb.app/api/auth/login/verify-2fa', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: email.trim(), code }),
